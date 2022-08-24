@@ -1,5 +1,5 @@
 {
-    "name": "dsiddharth2/php-zxing",
+    "name": "petarmarj/php-zxing",
     "description": "Wrapper for zxing using php",
     "type": "library",
     "license": "MIT",
@@ -7,11 +7,15 @@
         {
             "name": "Siddharth",
             "email": "dsiddharth2@gmail.com"
+        },
+        {
+            "name": "petarmarj",
+            "email": "trash@piit.ch"
         }
     ],
     "autoload": {
-        "psr-0" : {
-            "" : "src/"
+        "psr-4" : {
+            "PHPZxing\\" : "src/"
         }
     }
 }
