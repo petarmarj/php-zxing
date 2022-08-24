@@ -1,4 +1,5 @@
 <?php
+
 /*
 Descrition : ZxingImage - returns the decoded images in ZxingImage Object
 
@@ -32,11 +33,13 @@ authors:
 * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 * OTHER DEALINGS IN THE SOFTWARE.
 */
+
 namespace PHPZxing;
 
 use PHPZxing\PHPZxingInterface;
 
-class ZxingImage implements PHPZxingInterface {
+class ZxingImage implements PHPZxingInterface
+{
     // Decoded Value from source
     private $imageValue     = null;
 
@@ -44,35 +47,41 @@ class ZxingImage implements PHPZxingInterface {
     private $format         = null;
 
     // Type of decoded data - TEXT, URI etc..
-    private $type           = null;   
+    private $type           = null;
 
     // Path of the image decoded
     private $imagePath      = null;
 
-    public function __construct($imagePath, $imageValue , $format, $type) {
+    public function __construct($imagePath, $imageValue, $format, $type)
+    {
         $this->imageValue   = $imageValue;
         $this->format       = $format;
         $this->type         = $type;
         $this->imagePath    = $imagePath;
     }
 
-    public function isFound() {
+    public function isFound()
+    {
         return true;
     }
 
-    public function getImageValue() {
+    public function getImageValue()
+    {
         return $this->imageValue;
     }
 
-    public function getFormat() {
+    public function getFormat()
+    {
         return $this->format;
     }
 
-    public function getType() {
+    public function getType()
+    {
         return $this->type;
     }
 
-    public function getImagePath() {
+    public function getImagePath()
+    {
         return $this->imagePath;
     }
 }

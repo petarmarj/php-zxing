@@ -1,4 +1,5 @@
 <?php
+
 /*
 Descrition : PHPZxingBase Base class that has all base stuff stored
 
@@ -32,42 +33,48 @@ authors:
 * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 * OTHER DEALINGS IN THE SOFTWARE.
 */
+
 namespace PHPZxing;
 
-class PHPZxingBase  {
-
+class PHPZxingBase
+{
     // name of the javase.jar file located in /src/bin directory
-    private $_JAVASE_PATH = 'javase-3.4.1.jar';
+    private $JAVASE_PATH = 'javase-3.4.1.jar';
 
     // name of the core.jar file located in /src/bin directory
-    private $_CORE_PATH = "core-3.4.1.jar";
+    private $CORE_PATH = "core-3.4.1.jar";
 
     // name of the jcommander.jar file located in /src/bin directory
-    private $_JCOMMANDER_PATH = "jcommander-1.72.jar";
+    private $JCOMMANDER_PATH = "jcommander-1.72.jar";
 
     // location of java in your machine
-    private $_JAVA_PATH = "/usr/bin/java";
+    private $JAVA_PATH = "/usr/bin/java";
 
-    public function getJavaPath() {
-        return $this->_JAVA_PATH;
+    public function getJavaPath()
+    {
+        return $this->JAVA_PATH;
     }
 
-    public function getJARPath() {
-        return dirname(__DIR__) . DIRECTORY_SEPARATOR  . 'bin' . DIRECTORY_SEPARATOR . $this->_JAVASE_PATH;
+    public function getJARPath()
+    {
+        return dirname(__DIR__) . DIRECTORY_SEPARATOR  . 'bin' . DIRECTORY_SEPARATOR . $this->JAVASE_PATH;
     }
 
-    public function getCorePAth() {
-        return dirname(__DIR__) . DIRECTORY_SEPARATOR  . 'bin' . DIRECTORY_SEPARATOR . $this->_CORE_PATH;
+    public function getCorePAth()
+    {
+        return dirname(__DIR__) . DIRECTORY_SEPARATOR  . 'bin' . DIRECTORY_SEPARATOR . $this->CORE_PATH;
     }
 
-    public function getJcommanderPath() {
-        return dirname(__DIR__) . DIRECTORY_SEPARATOR  . 'bin' . DIRECTORY_SEPARATOR . $this->_JCOMMANDER_PATH;
+    public function getJcommanderPath()
+    {
+        return dirname(__DIR__) . DIRECTORY_SEPARATOR  . 'bin' . DIRECTORY_SEPARATOR . $this->JCOMMANDER_PATH;
     }
 
     /**
      * Set the default java path which we will use for decoding
      */
-    public function setJavaPath($javaPath = "/usr/bin/java") {
-        $this->_JAVA_PATH = $javaPath;
+    public function setJavaPath($javaPath = "/usr/bin/java")
+    {
+        $this->JAVA_PATH = $javaPath;
     }
 }

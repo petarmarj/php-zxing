@@ -1,4 +1,5 @@
 <?php
+
 /*
 Descrition : PHPZxingInterface interface that will have all the interface methods stored
 
@@ -32,8 +33,10 @@ authors:
 * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 * OTHER DEALINGS IN THE SOFTWARE.
 */
+
 namespace PHPZxing;
 
-interface PHPZxingInterface  {
+interface PHPZxingInterface
+{
     public function isFound();
 }
